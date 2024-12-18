@@ -568,6 +568,7 @@ class FacerecService extends _ComplexObject {
         RawImageF temp = RawImageF(image.width, image.height, Format.FORMAT_BGR, data.pointer!.cast());
 
         result = convertBGRA88882RGB(temp, baseAngle: baseAngle, reusableData: reusableData);
+        temp.dispose();
 
         break;
 
